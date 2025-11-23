@@ -1,274 +1,212 @@
-AI Voice Assistant for Financial Banking Operations
+# **AI Voice Assistant for Financial Banking Operations**
 
-An intelligent voice-driven banking assistant that enables users to perform secure financial operations using Natural Language Processing (NLP), Speech Recognition, Voice Biometrics, and AI-powered automation.
+An intelligent voice-enabled financial assistant that allows users to perform secure banking operations such as checking balances, transferring funds, viewing transactions, verifying KYC, and more — all through natural voice commands. The system integrates AI, NLP, Speech Recognition, and secure authentication to deliver a hands-free, secure, and accessible digital banking experience.
 
-⭐ Overview
 
-The AI Voice Assistant for Financial Banking Operations is designed to make digital banking more accessible, faster, and highly secure.
-It allows users to interact naturally with financial services through voice commands such as:
 
-Checking account balance
+## 🚀 **Overview**
 
-Transferring money
+The AI Voice Assistant for Financial Banking Operations bridges the gap between humans and digital banking interfaces.
+Users can naturally interact with the system using voice, eliminating the need for navigating complex menus or typing commands.
 
-Viewing transaction history
+This assistant supports real banking-like workflows such as:
 
-Loan and credit verification
+* Account inquiries
+* Fund transfers
+* Credit score & loan checks
+* KYC verification
+* OTP-secured transactions
+* Voice biometric authentication
 
-KYC verification
+Built using Python, NLP, and voice processing technologies, the system ensures accuracy, security, and a smooth conversational user experience.
 
-Generating OTP authentication
 
-Personalized financial alerts
 
-This project integrates AI, NLP, Speech Recognition, Voice Biometrics, and secure backend logic, aiming to provide hands-free banking for users including elderly citizens, people with disabilities, and individuals with limited digital literacy.
 
-🎯 Objectives
+---
 
-Enable core banking actions through natural voice commands
+## 🎯 **Key Features**
 
-Provide secure authentication using Voice Biometrics + OTP verification
+### ✔ **Voice-Based Banking**
 
-Understand user intent using NLP models
+Perform actions such as:
 
-Ensure high security and compliance with financial standards
+* “Check my balance”
+* “Transfer ₹500 to Rahul”
+* “Show my last 5 transactions”
 
-Deliver a conversational, user-friendly experience
+### ✔ **Voice Biometrics**
 
-Maintain modular architecture for easy scaling
+Authenticates users by matching their voiceprint against stored voice embeddings.
 
-Promote digital banking inclusion for all users
+### ✔ **OTP-Based Secure Transactions**
 
-🛠️ Technology Stack
-Frontend
+Uses Twilio API to send OTP for transaction verification.
 
-HTML5, CSS3, JavaScript
+### ✔ **NLP Intent Understanding**
 
-Speech Recognition & Speech Synthesis
+Identifies user intent and extracts important entities (amount, names, dates).
 
-Bootstrap / Tailwind CSS
+### ✔ **Text-to-Speech Feedback**
 
-Backend
+Provides voice responses for a complete conversational experience.
 
-Python
+### ✔ **Dummy Banking Database**
 
-Pandas, NumPy
+Includes 100 synthetic customer records with:
 
-Pathlib, Regex, Time
+* Account number
+* Balance
+* Credit score
+* Loan status
+* Transaction history
+* KYC details
 
-Pyttsx3 (Text-to-Speech)
+### ✔ **Modular Architecture**
 
-Twilio API (OTP Verification)
+Easily expandable to mobile apps, cloud systems, or real core banking APIs.
 
-SpeechRecognition Library (Voice → Text)
+---
 
-AI & NLP
+## 🛠️ **Technology Stack**
 
-Speech Recognition
+### **Frontend**
 
-NLP intent detection
+* HTML, CSS, JavaScript
+* Speech Recognition API
+* Text-to-Speech (Browser & Python)
 
-Voice Biometrics using voice embeddings
+### **Backend (Python)**
 
-Context-aware conversational logic
+* Pandas, NumPy
+* Pyttsx3
+* SpeechRecognition
+* Twilio (OTP API)
+* Pathlib, Regex, Time
 
-Database
+### **AI/NLP & Biometrics**
 
-CSV-based dummy banking dataset
+* NLP intent detection
+* Voice embeddings for authentication
+* Contextual conversation handling
 
-Contains 100 synthetic customer profiles
+### **Database**
 
-Includes fields like account number, balance, credit score, KYC status, etc.
+* CSV-based dummy banking dataset
+* Logs for transactions, KYC, loan status, etc.
 
-🧠 System Architecture
-1️⃣ User Interaction Layer
+---
 
-Captures the user’s voice using browser or microphone
+## 🧠 **System Architecture**
 
-Converts voice to text
+### **1. User Interaction Layer**
 
-Returns responses through TTS (pyttsx3)
+Captures voice input → Converts to text → Sends to backend.
+Responds through TTS.
 
-2️⃣ NLP & Processing Layer
+### **2. NLP & Processing Layer**
 
-Extracts intent (e.g., check balance, send money)
+Extracts action, amount, name, and context from user commands.
 
-Understands entities like amount, name, date
+### **3. Authentication Layer**
 
-Maintains multi-turn conversation context
+* Voice biometrics
+* OTP verification
+* Session tokens
 
-3️⃣ Authentication Layer
+### **4. Banking Logic Layer**
 
-Voice Biometrics: verifies voice print (threshold ≥ 0.80)
+Performs operations such as:
 
-OTP Verification: via Twilio API
+* Balance inquiry
+* Sending money
+* Loan status
+* Transaction logs
 
-Transactions require dual authentication
+### **5. Data Layer**
 
-4️⃣ Banking Operations Layer
+Stores customer profiles, balances, KYC status, and transaction history.
 
-Handles:
+### **6. Response Layer**
 
-Balance inquiry
+Generates voice and text-based responses for the user.
 
-Transfers
+---
 
-KYC verification
+## 📂 **Project Structure**
 
-Loan status
-
-Credit score checks
-
-Transaction history
-
-Interest calculations
-
-5️⃣ Data Management Layer
-
-CSV-based storage for:
-
-Customer details
-
-Transaction logs
-
-KYC/Loan info
-
-Balances & account status
-
-6️⃣ Response Layer
-
-Returns confirmation via voice output
-
-Displays details on screen
-
-Logs every transaction securely
-
-📂 Database Schema (Simplified)
-Field	Description
-Customer_ID	Unique ID
-Name	Customer name
-Account_No	Bank account number
-Balance	Current balance
-No_of_Transactions	Total completed transactions
-Last_Payment	Last payment description
-Loan_Status	Active/Closed
-Interest_Rate	Applicable rate
-Credit_Limit	Customer credit limit
-Reminder_Type	Alerts/EMI reminders
-Alerts_Enabled	Notification settings
-Last_Transaction_Date	Timestamp
-🔐 Security & Compliance
-Authentication & Authorization
-
-Voice Biometrics
-
-OTP via Twilio
-
-Session-based tokens
-
-Data Protection
-
-Masking sensitive information
-
-Encrypted communication
-
-Audit logs for every financial action
-
-Regulatory Alignment
-
-RBI Digital Banking Guidelines
-
-GDPR Data Privacy Principles
-
-ISO/IEC 27001 Security Standards
-
-Fraud Prevention
-
-OTP for every high-risk action
-
-Voice spoof detection
-
-Transaction validation limits
-
-🚀 Features
-✔ Voice-Driven Banking
-
-No need for typing—just speak naturally.
-
-✔ Voice Biometrics
-
-Password-less secure login.
-
-✔ Real-Time Fund Transfers
-
-Automated balance updates.
-
-✔ Intelligent NLP Understanding
-
-Understands natural queries:
-"Send ₹500 to Rahul"
-"What is my loan status?"
-
-✔ OTP Validation
-
-Dual-layer authentication for safety.
-
-✔ Financial Insights
-
-Credit score, limits, interest rate, and more.
-
-✔ 100-Record Dummy Banking Database
-
-Simulates real banking system behavior.
-
-📈 Scalability
-
-The system supports future upgrades:
-
-Core banking API integration
-
-Mobile app adaptation
-
-Cloud deployment
-
-Multilingual voice support
-
-Microservices architecture
-
-Edge AI processing
-
-🧪 AI / ML Components
-
-Speech-to-text (ASR)
-
-NLP intent detection
-
-Voice similarity model
-
-TTS engine for responses
-
-Automated transaction workflows
-
-📊 Flow Chart
-
-(Include the flowchart from your PDF if needed)
-
-📦 Project Structure
+```
 /BankAI
-│── /frontend
-│── /backend
-│── /database
-│── /voice_engine
+│── backend/
+│── frontend/
+│── database/
+│── voice_engine/
 │── OTP.py
 │── Speech rec.py
 │── main.py
 │── requirements.txt
 │── README.md
+```
 
-📹 Demo Video
+---
 
-▶ https://drive.google.com/file/d/1B7lMCwDlovtzTezydOuy-S7Y4bQhV0_J/view?usp=sharing
+## 🔐 **Security Features**
 
-📁 GitHub Repository
+* **2FA (Voice + OTP)**
+* **Data masking**
+* **Encrypted API interactions**
+* **Fraud monitoring**
+* **Audit logging**
+* **Regulatory compliance (RBI, GDPR principles)**
 
-🔗 https://github.com/prajesdas/FinSpeakAssistant.git
+---
+
+## 📈 **Scalability & Future Enhancements**
+
+* Integration with real banking APIs
+* Multilingual voice assistant
+* Mobile app integration
+* Real-time cloud speech engines
+* NoSQL storage for audit logs
+* AI-powered fraud detection
+
+---
+
+
+## 🎥 **Demo Video**
+
+🔗 [https://drive.google.com/file/d/1B7lMCwDlovtzTezydOuy-S7Y4bQhV0_J/view?usp=sharing](https://drive.google.com/file/d/1B7lMCwDlovtzTezydOuy-S7Y4bQhV0_J/view?usp=sharing)
+
+---
+
+## 🧪 **Installation & Setup**
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/ronitBiswas14/BankAI.git
+```
+
+### 2. Install dependencies
+
+```
+pip install -r requirements.txt
+```
+
+### 3. Run the application
+
+```
+python main.py
+```
+
+### 4. Ensure microphone permissions are enabled.
+
+---
+
+## 🤝 **Contributing**
+
+Pull requests are welcome!
+Please avoid uploading real API keys — use environment variables instead.
+
+---
+
